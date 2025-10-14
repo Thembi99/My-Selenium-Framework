@@ -8,6 +8,7 @@ public class BaseClass {
     {
         if (browser.equals("chrome"))
         {
+            //BaseClass
             System.setProperty("webdriver.chrome.driver",readConfig.getChromePath());
             driver=new ChromeDriver();
 
