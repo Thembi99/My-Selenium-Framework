@@ -1,5 +1,4 @@
 package pageObject;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -35,12 +34,18 @@ public class PO_loginPage
     }
 
     public void setPassword(String password) {
-        txtUserName.sendKeys(password);
+        txtPassword.sendKeys(password);
     }
 
     public void clickLogin() {
         btnLogin.click();
     }
+
+//    public void signInUser(String username, String password){
+//        txtUserName.sendKeys(username);
+//        txtPassword.sendKeys(password);
+//        btnLogin.click();
+//    }
 
 
 }
