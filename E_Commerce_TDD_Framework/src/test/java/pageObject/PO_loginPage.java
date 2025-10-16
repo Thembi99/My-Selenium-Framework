@@ -16,7 +16,7 @@ public class PO_loginPage
         PageFactory.initElements(rdriver,this);
     }
 
-    @FindBy(xpath = "/html/body/div/div/div[2]/div[1]/div/div/form/div[1]/input")
+    @FindBy(xpath = "//input[@id='user-name']")
     @CacheLookup
     WebElement txtUserName;
 

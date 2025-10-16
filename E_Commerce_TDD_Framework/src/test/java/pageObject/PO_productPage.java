@@ -33,6 +33,14 @@ public class PO_productPage extends PO_basePage
     @CacheLookup
     WebElement btnJacketAddToCart;
 
+    @FindBy(xpath = "/html/body/div/div/div/div[1]/div[2]/div/button")
+    @CacheLookup
+    WebElement btnBackToProducts;
+
+    @FindBy(xpath = "//span[@class='shopping_cart_badge']")
+    @CacheLookup
+    WebElement btnCart;
+
     public PO_productPage(WebDriver rdriver) {
         super(rdriver);
     }
@@ -42,12 +50,20 @@ public class PO_productPage extends PO_basePage
         {
             linkTextBackPack.click();
             btnBackPackAddToCart.click();
+            btnBackToProducts.click();
             linkTextTshirt.click();
             btnTshirtAddToCart.click();
+            btnBackToProducts.click();
             linkTextJacket.click();
             btnJacketAddToCart.click();
 
+
         }
+
+    public void clickbtnCart()
+    {
+        btnCart.click();
+    }
 
 
 }
