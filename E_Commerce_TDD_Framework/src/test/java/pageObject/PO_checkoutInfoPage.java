@@ -8,19 +8,19 @@ import org.openqa.selenium.support.FindBy;
 public class PO_checkoutInfoPage extends PO_basePage
 {
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/form/div[1]/div[1]/input")
+    @FindBy(xpath = "//input[@id='first-name']")
     @CacheLookup
     WebElement txtFirstName;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/form/div[1]/div[2]/input")
+    @FindBy(xpath = "//input[@id='last-name']")
     @CacheLookup
     WebElement txtLAstName;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/form/div[1]/div[3]/input")
+    @FindBy(xpath = "//input[@id='postal-code']")
     @CacheLookup
     WebElement txtZipCOde;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/form/div[2]/input")
+    @FindBy(xpath = "//input[@id='continue']")
     @CacheLookup
     WebElement btnContinue;
 

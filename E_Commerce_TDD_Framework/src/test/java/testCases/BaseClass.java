@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import utilities.ReadConfig;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
@@ -30,7 +31,8 @@ public class BaseClass {
 
 
         driver.get(baseURL);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
 
