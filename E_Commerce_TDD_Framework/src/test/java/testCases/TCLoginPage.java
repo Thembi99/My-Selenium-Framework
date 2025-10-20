@@ -59,6 +59,8 @@ public class TCLoginPage extends BaseClass
 
         Thread.sleep(1000);
 
+        checkoutInfo.clickFinish();
+
 
 
 
