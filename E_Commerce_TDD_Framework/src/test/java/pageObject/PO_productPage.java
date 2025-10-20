@@ -48,21 +48,21 @@ public class PO_productPage extends PO_basePage
 
     public void addProductsToCart() throws InterruptedException {
             //linkTextBackPack.click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             btnBackPackAddToCart.click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             //btnBackToProducts.click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
            // linkTextTshirt.click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             btnTshirtAddToCart.click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             //btnBackToProducts.click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
            // linkTextJacket.click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             btnJacketAddToCart.click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
 
         }
 

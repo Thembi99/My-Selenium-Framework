@@ -54,8 +54,27 @@ public class ReadConfig {
 
     public String getPassword() {
         String password = properties.getProperty("password");
-        return password;   }
+        return password;
+    }
 
+    public String getFirstname() {
+        String firstname = properties.getProperty("firstname");
+        return firstname;
+    }
+
+
+    public String getlastname() {
+        String lastname = properties.getProperty("lastname");
+        return lastname;
+    }
+
+
+    public String getzipcode() {
+        String zipcode = properties.getProperty("zipcode");
+        return zipcode;
+
+
+    }
 
 }
 

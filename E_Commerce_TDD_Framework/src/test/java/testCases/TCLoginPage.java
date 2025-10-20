@@ -24,20 +24,20 @@ public class TCLoginPage extends BaseClass
         pl.setUserName(readconfig.getUsername());
         pl.setPassword(readconfig.getPassword());
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         pl.clickLogin();
 
-        Thread.sleep(5000);
+        Thread.sleep(2000);
        //Adding products to cart
         pro.addProductsToCart();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         pro.clickbtnCart();
 
         //Verify text and checkout
         poCheckOverviewPage.verifyProductsOnCart();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         //Scroll down to see the checkout button
         // Cast driver to JavascriptExecutor
@@ -45,12 +45,20 @@ public class TCLoginPage extends BaseClass
 
         // Scroll down by a specific pixel value (e.g., 1000 pixels)
         js.executeScript("window.scrollBy(0, 500);");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         poCheckOverviewPage.ClickOverviewCheckout();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         //Verify check customer info
+        checkoutInfo.confirmUserDetails(readconfig.getFirstname(), readconfig.getlastname(), readconfig.getzipcode());
+
+        Thread.sleep(1000);
+
+        checkoutInfo.clickContinue();
+
+        Thread.sleep(1000);
+
 
 
 
