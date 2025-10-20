@@ -38,7 +38,6 @@ public class BaseClass {
                 System.out.println("Invalid browser name..");
                 return;
         }
-        driver=new ChromeDriver();
 
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

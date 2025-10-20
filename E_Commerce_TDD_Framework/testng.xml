@@ -5,7 +5,7 @@
           name="C:\Users\Thembi Mahwayi\Documents\GitHub\My-Selenium-Framework\E_Commerce_TDD_Framework\src\test\java\testCases">
 
         <parameter name="os" value="Windows"/>
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="firefox"/>
         <classes>
             <class name="testCases.TCLoginPage">
             </class>

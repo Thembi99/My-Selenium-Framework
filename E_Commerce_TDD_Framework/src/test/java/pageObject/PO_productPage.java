@@ -9,35 +9,35 @@ import org.openqa.selenium.support.PageFactory;
 public class PO_productPage extends PO_basePage
 {
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div")
+    @FindBy(xpath = "//div[normalize-space()='Sauce Labs Backpack']")
     @CacheLookup
     WebElement linkTextBackPack;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/button")
+    @FindBy(xpath = "//button[@id='add-to-cart']")
     @CacheLookup
     WebElement btnBackPackAddToCart;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[3]/div[2]/div[1]/a/div")
+    @FindBy(xpath = "//div[normalize-space()='Sauce Labs Bolt T-Shirt']")
     @CacheLookup
     WebElement linkTextTshirt;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div[2]/button")
+    @FindBy(xpath = "//button[@id='add-to-cart']")
     @CacheLookup
     WebElement btnTshirtAddToCart;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div/div[4]/div[2]/div[1]/a/div")
+    @FindBy(xpath = "//div[normalize-space()='Sauce Labs Fleece Jacket']")
     @CacheLookup
     WebElement linkTextJacket;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[2]/div/div/div[2]/button")
+    @FindBy(xpath = "//button[@id='add-to-cart']")
     @CacheLookup
     WebElement btnJacketAddToCart;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[1]/div[2]/div/button")
+    @FindBy(xpath = "//button[@id='back-to-products']")
     @CacheLookup
     WebElement btnBackToProducts;
 
-    @FindBy(xpath = "//span[@class='shopping_cart_badge']")
+    @FindBy(xpath = "//a[@class='shopping_cart_link']")
     @CacheLookup
     WebElement btnCart;
 
@@ -46,16 +46,23 @@ public class PO_productPage extends PO_basePage
     }
 
 
-    public void addProductsToCart()
-        {
+    public void addProductsToCart() throws InterruptedException {
             linkTextBackPack.click();
+            Thread.sleep(2000);
             btnBackPackAddToCart.click();
+            Thread.sleep(2000);
             btnBackToProducts.click();
+            Thread.sleep(2000);
             linkTextTshirt.click();
+            Thread.sleep(2000);
             btnTshirtAddToCart.click();
+            Thread.sleep(2000);
             btnBackToProducts.click();
+            Thread.sleep(2000);
             linkTextJacket.click();
+            Thread.sleep(2000);
             btnJacketAddToCart.click();
+            Thread.sleep(2000);
 
 
         }
