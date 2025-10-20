@@ -2,15 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/Thembi Mahwayi/Documents/InteliJProject/MyOpenCartFrameworkV1/src/test/java/testCases">
+          name="C:\Users\Thembi Mahwayi\Documents\GitHub\My-Selenium-Framework\E_Commerce_TDD_Framework\src\test\java\testCases">
 
         <parameter name="os" value="Windows"/>
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testCases.TCAccountRegistrationTest">
-                <methods>
-                    <include name="verify_account_registration"/>
-                </methods>
+            <class name="testCases.TCLoginPage">
             </class>
         </classes>
     </test>
