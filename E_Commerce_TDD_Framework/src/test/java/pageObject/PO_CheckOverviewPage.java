@@ -21,27 +21,38 @@ public class PO_CheckOverviewPage extends PO_basePage
     @CacheLookup
     WebElement totalPriceLinkTxtJacket;
 
+
+    @FindBy(xpath = "//button[@id='checkout']")
+    @CacheLookup
+    WebElement btnOverviewCheckout;
+
     public void verifyProductsOnCart()
     {
         //1. Verify product 1
         String actualBacPackText = totalPriceLinkTxtBackPack.getText();
         String expectedBackPackText = "Backpack text does not exist";
 
-        Assert.assertEquals(actualBacPackText, expectedBackPackText, "Item does not xist");
+        Assert.assertEquals(actualBacPackText, expectedBackPackText, "Item text does not match");
 
 
         //2. Verify product 2
         String actualTshirtText = totalPriceLinkTxtTshirt.getText();
         String expectedTshirtText = "Sauce Labs Bolt T-Shirt";
 
-        Assert.assertEquals(actualTshirtText, expectedTshirtText, "Item does not xist");
+        Assert.assertEquals(actualTshirtText, expectedTshirtText, "Item text does not match");
 
         //3. Verify product 3
         String actualJacketText = totalPriceLinkTxtJacket.getText();
         String expectedJacketText = "Sauce Labs Fleece Jacket";
 
-        Assert.assertEquals(actualJacketText, expectedJacketText, "Item does not xist");
+        Assert.assertEquals(actualJacketText, expectedJacketText, "Item text does not match");
     }
+
+    public void ClickOverviewCheckout()
+    {
+        btnOverviewCheckout.click();
+    }
+
     public PO_CheckOverviewPage(WebDriver rdriver)
     {
         super(rdriver);

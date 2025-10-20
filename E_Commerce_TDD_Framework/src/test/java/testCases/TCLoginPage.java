@@ -1,9 +1,7 @@
 package testCases;
 
 import org.testng.annotations.Test;
-import pageObject.PO_CheckOverviewPage;
-import pageObject.PO_loginPage;
-import pageObject.PO_productPage;
+import pageObject.*;
 
 import java.time.Duration;
 
@@ -19,6 +17,7 @@ public class TCLoginPage extends BaseClass
         PO_loginPage pl = new PO_loginPage(driver);
         PO_productPage pro = new PO_productPage(driver);
         PO_CheckOverviewPage poCheckOverviewPage = new PO_CheckOverviewPage(driver);
+        PO_checkoutInfoPage checkoutInfo = new PO_checkoutInfoPage(driver);
 
         //Username and password
         pl.setUserName(readconfig.getUsername());
@@ -35,10 +34,17 @@ public class TCLoginPage extends BaseClass
 
         pro.clickbtnCart();
 
-        //Verify text
+        //Verify text and checkout
         poCheckOverviewPage.verifyProductsOnCart();
-
         Thread.sleep(2000);
+
+        //Scroll down to see the checkout button
+        poCheckOverviewPage.ClickOverviewCheckout();
+        Thread.sleep(2000);
+
+        //Verify check customer info
+
+
 
 
 

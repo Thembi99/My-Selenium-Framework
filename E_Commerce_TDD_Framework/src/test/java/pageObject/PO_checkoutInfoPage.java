@@ -25,6 +25,13 @@ public class PO_checkoutInfoPage extends PO_basePage
     WebElement btnContinue;
 
 
+    public void signInUser(String firstname, String lastname, String zcode){
+        txtFirstName.sendKeys(firstname);
+        txtLAstName.sendKeys(lastname);
+        txtZipCOde.sendKeys(zcode);
+        btnContinue.click();
+    }
+
     public PO_checkoutInfoPage(WebDriver rdriver) {
         super(rdriver);
     }
