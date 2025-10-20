@@ -1,5 +1,6 @@
 package testCases;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 import pageObject.*;
 
@@ -39,6 +40,13 @@ public class TCLoginPage extends BaseClass
         Thread.sleep(2000);
 
         //Scroll down to see the checkout button
+        // Cast driver to JavascriptExecutor
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Scroll down by a specific pixel value (e.g., 1000 pixels)
+        js.executeScript("window.scrollBy(0, 500);");
+        Thread.sleep(2000);
+
         poCheckOverviewPage.ClickOverviewCheckout();
         Thread.sleep(2000);
 

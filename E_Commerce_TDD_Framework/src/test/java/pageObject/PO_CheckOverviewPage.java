@@ -30,7 +30,7 @@ public class PO_CheckOverviewPage extends PO_basePage
     {
         //1. Verify product 1
         String actualBacPackText = totalPriceLinkTxtBackPack.getText();
-        String expectedBackPackText = "Backpack text does not exist";
+        String expectedBackPackText = "Sauce Labs Backpack";
 
         Assert.assertEquals(actualBacPackText, expectedBackPackText, "Item text does not match");
 
