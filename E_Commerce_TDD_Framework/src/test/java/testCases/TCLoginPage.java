@@ -57,6 +57,13 @@ public class TCLoginPage extends BaseClass
 
         checkoutInfo.clickContinue();
 
+        Thread.sleep(2000);
+        //Verify total order
+        js.executeScript("window.scrollBy(0, 500);");
+
+        checkoutInfo.verifyTotalOrderBalance();
+
+
         Thread.sleep(1000);
 
         checkoutInfo.clickFinish();

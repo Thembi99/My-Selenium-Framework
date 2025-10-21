@@ -33,6 +33,10 @@ public class PO_checkoutInfoPage extends PO_basePage
     @CacheLookup
     WebElement orderCompleteVerification;
 
+    @FindBy(xpath = "//div[@class='summary_total_label']")
+    @CacheLookup
+    WebElement totatOrderVerification;
+
 
     public void confirmUserDetails(String firstname, String lastname, String zcode){
         txtFirstName.sendKeys(firstname);
@@ -56,6 +60,15 @@ public class PO_checkoutInfoPage extends PO_basePage
         String expectedCompleteText = "Thank you for your order!";
 
         Assert.assertEquals(actualCompleteText, expectedCompleteText, "Order is not complete");
+
+    }
+
+    public void verifyTotalOrderBalance() {
+        //1. Verify product 1
+        String actualCompleteTotal = totatOrderVerification.getText();
+        String expectedCompleteTotal = "Total: $103.65";
+
+        Assert.assertEquals(actualCompleteTotal, expectedCompleteTotal, "Total is not equals to the $103.65");
 
     }
     public PO_checkoutInfoPage(WebDriver rdriver) {
